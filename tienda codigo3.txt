@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXION</title>
+    <!-- Vinculando Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .texto-inferior {
+            position: absolute;
+            bottom: 130px;
+            left: -360px;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+            padding: 14px;
+            border-radius: 10px;
+            max-width: 300px;
+        }
+
+        .contenedor-relativo {
+            position: relative;
+            display: inline-block;
+            width: 50%;
+            margin-right: 20px; 
+        }
+
+        .contenedor-relativo img {
+            width: 100%;
+        }
+
+        .flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            color: red;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .flecha-izquierda {
+            left: 0;
+        }
+
+        .flecha-derecha {
+            right: 0;
+        }
+
+        .imagenes-al-lado {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 19px; 
+        }
+
+        .imagenes-al-lado img {
+            width: 190px; 
+            margin: 0 10px; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FLEXION</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">HOMBRE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">MUJER</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">KIDS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4 text-center">
+        <div class="contenedor-relativo">
+            <img src="https://marcadegol.com/fotos//2017/09/adidas-thunder-storm-pack-header.jpg" alt="Imagen de ejemplo">
+            <!-- Flechas de navegación -->
+            <span class="flecha flecha-izquierda" onclick="console.log('Imagen anterior')">&#9664;</span>
+            <span class="flecha flecha-derecha" onclick="console.log('Imagen siguiente')">&#9654;</span>
+            <div class="texto-inferior">
+                <p>
+                    Bienvenido a Flexion, donde el rendimiento y el estilo se encuentran. Encuentra ropa deportiva de alta calidad diseñada para acompañarte en cada entrenamiento.
+                </p>
+                <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+        </div>
+
+        <!-- Contenedor de las imágenes al lado -->
+        <div class="imagenes-al-lado">
+            <img src="https://www.deportescaneda.com/uploads/photo/image/17925/A27375_UVLluptB.JPG"Imagen 1">
+            <img src="https://www.deportescaneda.com/uploads/photo/image/20020/A29151_e6ObDIES.JPG" alt="Imagen 2">
+            <img src="https://www.deportescaneda.com/uploads/photo/image/17841/A27333_t9oDsFDZ.JPG" alt="Imagen 3">
+        </div>
+    </div>
+
+    <!-- Vinculando Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
